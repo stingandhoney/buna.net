@@ -1,0 +1,4 @@
+#!/bin/bash
+
+alias sail='./vendor/bin/sail'
+alias art='./vendor/bin/sail artisan'
