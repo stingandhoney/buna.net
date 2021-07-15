@@ -62,5 +62,6 @@ Route::post('category', [CategoryController::class, 'create'])->name('category.c
 Route::get('person', [PersonController::class, 'index'])->name('person.index');
 Route::group(["prefix" => "/api"], function () {
     Route::get('documents', [DocumentController::class, 'index']);
+    Route::get('people', [PersonController::class, 'getPeople'] );
 });
 

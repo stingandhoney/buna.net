@@ -18,6 +18,8 @@ class Person extends Model
         'gender'
     ];
 
+    protected $hidden = ['created_at', 'updated_at', 'is_male', 'birth_date', 'diplomas'];
+
     public function juries(): HasMany
     {
         return $this->hasMany(Jury::class);

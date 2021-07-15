@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Document;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\StudentResource;
 use App\Models\Person\Diploma;
 use App\Models\Person\Person;
 use Illuminate\Contracts\Foundation\Application;
@@ -13,10 +14,9 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    public function index(): Factory|View|Application
+    public function index() //Factory|View|Application
     {
-       $students =  Person::query()->with('diplomas')->get();
-
+       $students = new StudentResource(Person::query()->with('diplomas')->get());
         return view('student.index', compact('students'));
     }
 

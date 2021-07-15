@@ -2,3 +2,5 @@
 
 alias sail='./vendor/bin/sail'
 alias art='./vendor/bin/sail artisan'
+alias npm='./vendor/bin/sail npm run'
+

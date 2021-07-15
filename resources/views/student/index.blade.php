@@ -5,7 +5,7 @@
         <h1 class="capitalize text-xl ">étudiants</h1>
         <div class="flex">
             <div class="w-6/12 p-4 bg-gray-100 mr-10 rounded-md">
-                <ul>
+                {{--<ul>
                     @foreach($students as $student)
                         <li>
                             <div>{{ $student->full_name }}</div>
@@ -24,7 +24,13 @@
                             </ul>
                         </li>
                     @endforeach
-                </ul>
+                </ul>--}}
+                <div class="relative flex flex-col w-full">
+                    <label for="search">Nom complet</label>
+                    <input class="px-4 py-3 border rounded-md" type="text"
+                           placeholder="Entrez le nom complet" autocomplete="off" id="search" name="search">
+                    <ul class="absolute inset-y-20 w-full" id="match_list"></ul>
+                </div>
             </div>
             <form class="flex-1" action="{{ route('students') }}" method="post">
                 @csrf
