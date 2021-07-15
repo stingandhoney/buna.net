@@ -8,8 +8,8 @@
                 <files/>
             </div>
             <form class="mt-12">
-                <input-text info="Hello"/>
-               {{-- <div class="relative mt-6">
+{{--                <input-text info="Hello"/>--}}
+               <div class="relative mt-6">
                     <input type="text"
                            autocomplete="off"
                            id="email"
@@ -37,7 +37,7 @@
                     >
                         Mot de passe
                     </label>
-                </div>--}}
+                </div>
             </form>
         </div>
     </div>
